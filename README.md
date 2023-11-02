@@ -15,3 +15,13 @@ part of the array each recursive call considers.
 Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
+
+## Answer
+
+In the mergeSort function, the outer loop iterates log₂(n) times (where 'n' denotes the array's size). This behavior comes from doubling the subarray sizes during each iteration.
+
+The inner loop, in each iteration of the outer loop, runs a maximum of n/2 times because it partitions the array into subarrays of varying sizes.
+
+The merge function is merging left and right subarrays, first to compare left and right elements on both sides, shift and swap elements as needed. In the worst case, the time complexity is O(n) since there might be a traverse of every element. 
+
+So the total worst-case complexity of this merge sort is O(n^2 log n).
